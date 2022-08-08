@@ -1,0 +1,227 @@
+:root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+
+.container-full {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--backgrond);
+    background-image: url("/assets/desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 10%;
+}
+
+
+.menu ul {
+    display: flex;
+    gap: 2em;
+}
+
+.menu ul li {
+    list-style: none;
+    font-size: 20px;
+
+}
+
+.menu ul li a {
+    text-decoration: none;
+}
+
+
+.btn-getCafe {
+    border: none;
+    padding: 10px 35px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid var(--button);
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+
+.btn-getCafe:hover {
+    background-color: var(--button);
+    color: var(--text-color);
+}
+
+
+
+.container-corpo {
+    width: 100%;
+    height: 84vh;
+}
+
+
+.container-corpo h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 65px;
+}
+
+
+
+.container-image {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+
+.container-tittle {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+}
+
+.stroke {
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+    color: var(--backgrond);
+}
+
+
+.icon-mobile,
+.logo-mobile,.btn-icon-mobile {
+    display: none;
+}
+
+
+
+
+.txt-mobile {
+    display: none;
+    position: relative;
+    text-align: center;
+    margin-top: 21%;
+    font-size: 35px;
+}
+
+/*Móbile*/
+
+@media only screen and (max-width: 600px) {
+
+
+    .menu {
+        display: none;
+    }
+
+    .container-image img {
+        position: relative;
+        width: 100%;
+    }
+
+    .icon-mobile,
+    .logo-mobile,
+    .txt-mobile, .btn-icon-mobile  {
+        display: block;
+    }
+
+
+    .logo-desktop {
+        display: none;
+    }
+
+    .container-tittle h1 {
+        font-size: 40px;
+    }
+
+    .container-tittle {
+        top: 55%;
+    }
+
+    button.btn-getCafe {
+        position: absolute;
+        top: 40%;
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-left: 22%;
+    }
+
+    .container-full {
+        background-image: url(/assets/blur-mobile.png);
+    }
+
+    img.logo-mobile {
+        padding: 0 !important;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 20px;
+        gap: 23%;
+        border-bottom: solid 0.5px var(--border-menu-mobile);
+    }
+
+    .is-hidden {
+        display: block;
+     
+    }
+
+    .menu ul {
+        position: absolute;
+        display: block; 
+        margin-top: 11%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        z-index: 999;
+    }
+
+    nav.menu.is-hidden ul li {
+        border-bottom: 1px solid var(--border-menu-mobile);
+        
+        padding: 15px 0px 15px 15px;
+        font-size: 25px;
+        
+    }
+
+    nav.menu.is-hidden ul li a {
+        color: var(--text-color-menu-mobile);
+    }
+
+    nav.menu.is-hidden ul li:nth-child(1) {
+        border-left: 6px solid var(--button);
+    }
+
+    a.icon-mobile i {
+        font-size: 25px;
+        color: var(--button);
+    }
+
+    
+
+
+  
+
+}
